@@ -7,7 +7,7 @@ View and manage the departments, roles, and employees in my company.
 ## Demo
 Video Demonstration: 
 
-![concept mockup](/Concept-Mockup.png)
+![demo thumbnail](/img/12-sql-homework-video-thumbnail.png)
 
 ## Installation
 Ensure you have node.js downloaded. Git Clone the repo into your local drive. Navigate your terminal to the cloned directory (folder). Run $node index.js. Follow the prompts to enter new employees. Once finished a table with all the input data will be saved.
@@ -23,7 +23,7 @@ Ensure you have node.js downloaded. Git Clone the repo into your local drive. Na
 - [ ] WHEN I choose to update an employee role THEN I am prompted to select an employee to update and their new role and this information is updated in the database
 - [ ] BONUS - Update employee managers, View employees by manager, View employees by department, Delete departments, roles, and employees. & View the total utilized budget of a department—in other words, the combined salaries of all employees in that department.
 
-![concept mockup](/Concept-Mockup.png)
+![concept mockup](./img/12-sql-homework-demo-01.png)
 
 ## License
 Refer to [LICENSE](/LICENSE).

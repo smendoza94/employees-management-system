@@ -9,7 +9,7 @@ inquirer.prompt([
   ])
   .then((answers) => {
     if (answers === 'View Depatments') {
-      
+
     } else if (answers === 'View Roles') {
 
     } else if (answers === 'View Employees') {
@@ -27,3 +27,5 @@ inquirer.prompt([
   .catch((error) => {
       console.log(error.message);
   })
+
+  module.exports = inquirer;

@@ -1,4 +1,4 @@
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
+INSERT INTO employees (first_name, last_name, role_id, manager_id)
 VALUES
 ('James', 'Fraser', 1, 1),
   ('Jack', 'London', 2, 2),
@@ -11,7 +11,7 @@ VALUES
   ('Emil', 'Zola', 4, 3),
   ('Sissy', 'Coalpits', 1, 1);
 
-INSERT INTO role (title, salary, department_id)
+INSERT INTO roles (title, salary, department_id)
 VALUES
   ('Junior Developer', 55361.89 , 1),
   ('Junior Developer', 58678.12 , 2),
@@ -19,7 +19,7 @@ VALUES
   ('Project Manager', 102206.46, 2),
   ('Chief Executive Officer', 210565.99, 3);
 
-INSERT INTO department (name)
+INSERT INTO departments (name)
 VALUES
   ('Frontend Developer'),
   ('Backend Developer'),

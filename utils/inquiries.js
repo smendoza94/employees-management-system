@@ -1,29 +1,38 @@
 const inquirer = require('inquirer');
+const { displayDatabase } = require('./displayDatabase');
 const { viewDepartments, addDepartments } = require('./departments');
 
 const inquiries = function () {
   inquirer.prompt([
       {
         type: 'list', name: 'menu', message: 'Main Menu:',
-        choices: ['View Depatments','View Roles','View Employees',
+        choices: ['Show All','View Depatments','View Roles','View Employees',
         'Add Department','Add Role','Add Employee','Update Employee']
       }
     ])
     .then((answers) => {
-      if (answers === 'View Depatments') {
-        viewDepartments();
-        inquiries();
-      } else if (answers === 'View Roles') {
+      if (answers.menu === 'Show All') {
+        displayDatabase(); inquiries();
+      }
+      if (answers.menu === 'View Depatments') {
+        viewDepartments(); inquiries();
+      } 
+      if (answers.menu === 'View Roles') {
   
-      } else if (answers === 'View Employees') {
+      } 
+      if (answers.menu === 'View Employees') {
   
-      } else if (answers === 'Add Department') {
+      } 
+      if (answers.menu === 'Add Department') {
   
-      } else if (answers === 'Add Role') {
+      } 
+      if (answers.menu === 'Add Role') {
   
-      } else if (answers === 'Add Employee') {
+      } 
+      if (answers.menu === 'Add Employee') {
   
-      } else if (answers === 'Update Employee'){
+      } 
+      if (answers.menu === 'Update Employee'){
   
       }
     })
@@ -31,5 +40,7 @@ const inquiries = function () {
         console.log(error.message);
     })
 };
+
+inquiries();
 
 module.exports = inquiries;

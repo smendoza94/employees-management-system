@@ -20,7 +20,7 @@ const displayDatabase = function () {
       console.log(err.message);
       return;
     }
-    console.log('/nFull Company Information');
+    console.log('\nFull Company Information');
     console.table(rows);
   })
 };

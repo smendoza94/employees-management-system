@@ -1,2 +1,2 @@
-const { mainMenu } = require('./utils');
+const { mainMenu } = require('./utils/index.js');
 mainMenu();

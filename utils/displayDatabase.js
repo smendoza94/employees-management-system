@@ -1,4 +1,5 @@
 const db = require('../db/connection');
+// const { mainMenu } = require('./index');
 
 const displayDatabase = function () {
   const sql = `
@@ -22,7 +23,9 @@ const displayDatabase = function () {
     }
     console.log('\nFull Company Information');
     console.table(rows);
-  })
+  });
 };
+
+// mainMenu();
 
 module.exports = { displayDatabase };

@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const db = require('../db/connection');
-const { mainMenu } = require('./index');
+// const { mainMenu } = require('./index');
 
 const viewEmployees = function() {
   const sql = `SELECT * FROM employees`;

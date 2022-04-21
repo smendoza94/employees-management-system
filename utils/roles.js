@@ -14,8 +14,8 @@ const viewRoles = function() {
   });
 };
 
-const addRole = function() {
+const addRoles = function() {
 
 };
 
-module.exports = { viewRoles, addRole };
+module.exports = { viewRoles, addRoles };

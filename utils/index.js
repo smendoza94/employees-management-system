@@ -13,20 +13,30 @@ const mainMenu = function () {
       }
     ])
     .then((answers) => {
-      if (answers.menu === 'Show All') { displayDatabase(); mainMenu(); }
-      if (answers.menu === 'View Depatments') { viewDepartments(); mainMenu(); } 
-      if (answers.menu === 'View Roles') { viewRoles(); mainMenu(); } 
-      if (answers.menu === 'View Employees') { viewEmployees(); mainMenu(); } 
-      if (answers.menu === 'Add Department') { addDepartments(); mainMenu(); } 
-      if (answers.menu === 'Add Role') { addRoles(); mainMenu(); } 
-      if (answers.menu === 'Add Employee') { addEmployees(); mainMenu(); } 
-      if (answers.menu === 'Update Employee'){ updateEmployees(); mainMenu(); }
+      console.log(answers);
+      switch (answers.menu) {
+        case 'Show All': displayDatabase(); break;
+        case 'View Depatments': viewDepartments(); break;
+        case 'View Roles': viewRoles(); break;
+        case 'View Employees': viewEmployees(); break;
+        case 'Add Department': addDepartments(); break;
+        case 'Add Role': addRoles(); break;
+        case 'Add Employee': addEmployees(); break;
+        case 'Update Employee': updateEmployees(); break;
+      }
+
+      // if (answers.menu === 'Show All') { displayDatabase(); }
+      // if (answers.menu === 'View Depatments') { viewDepartments(); } 
+      // if (answers.menu === 'View Roles') { viewRoles(); } 
+      // if (answers.menu === 'View Employees') { viewEmployees(); } 
+      // if (answers.menu === 'Add Department') { addDepartments(); } 
+      // if (answers.menu === 'Add Role') { addRoles(); } 
+      // if (answers.menu === 'Add Employee') { addEmployees(); } 
+      // if (answers.menu === 'Update Employee'){ updateEmployees(); }
     })
     .catch((error) => {
         console.log(error.message);
     })
 };
-
-mainMenu();
 
 module.exports = { mainMenu };

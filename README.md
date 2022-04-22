@@ -5,9 +5,9 @@ A command-line application from scratch to manage a company's employee database,
 View and manage the departments, roles, and employees in my company. 
 
 ## Demo
-Video Demonstration: 
+Video Demonstration: https://drive.google.com/file/d/1krcGPv-2gkpdEe-vYx6JScrplhd1hx2a/view
 
-![demo thumbnail](/img/12-sql-homework-video-thumbnail.png)
+![demo thumbnail](/img/demo_of_program.jpg)
 
 ## Installation
 Ensure you have node.js downloaded. Git Clone the repo into your local drive. Navigate your terminal to the cloned directory (folder). Run $node index.js. Follow the prompts to enter new employees. Once finished a table with all the input data will be saved.

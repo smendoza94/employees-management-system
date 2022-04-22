@@ -46,7 +46,7 @@ const addRoles = function() {
     }
   ])
   .then((answers) => {
-    const sql = `INSERT INTO roles (title, salary, department) VALUES (?,?,?)`;
+    const sql = `INSERT INTO roles (title, salary, department_id) VALUES (?,?,?)`;
     const params = [answers.title, answers.salary, answers.department];
     db.query(sql, params, (err, result) => {
       if (err) {

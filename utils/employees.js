@@ -59,23 +59,25 @@ const updateEmployees = function() {
       type: 'list',
       name: 'updateParam',
       message: 'What employee characteristic would you like to update?',
-      choices: [first_name, last_name, role_id, manager_id]
-    },
-    {
-      type: 'text',
-      name: 'originalValue',
-      message: 'What value would you like to replace?'
+      choices: [`first_name`, `last_name`, `role_id`, `manager_id`]
     },
     {
       type: 'number',
       name: 'indexNewValue',
       message: 'What is the index value of this employee?'
-    }
+    },
+    {
+      type: 'text',
+      name: 'newValue',
+      message: 'What new value would you like to replace it with?'
+    },
   ])
   .then((answers) => {
-    const sql = `UPDATE employees SET ? = ? WHERE id = ?`;
-    const params = [answers.updateParam, answers.originalValue, answers.indexNewValue];
+    const sql = `UPDATE employees SET last_name = ? WHERE id = ?`;
+    const params = [answers.newValue, answers.indexNewValue];
     db.query(sql, params, (err, result) => {
+      // console.log(sql);
+      // console.log(params);
       if (err) {
         console.log(err.message);
         return;

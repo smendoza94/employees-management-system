@@ -1,22 +1,5 @@
 const inquirer = require("inquirer");
 const db = require('../db/connection');
-// const { mainMenu } = require('./index');
-
-// const departments = function() {
-//   const sql = `SELECT departments.name FROM departments`;
-//   db.query(sql, (err, rows) => {
-//     if (err) {
-//       console.log(err.message);
-//       return;
-//     }
-//     let departmentList = [];
-//     for (i = 0; i < rows.length; i++) {
-//       let row = rows[i].name;
-//       departmentList = departmentList.push(row);
-//     };
-//     return departmentList;
-//   })
-// }; 
 
 const viewRoles = function() {
   const sql = `SELECT * FROM roles`;
